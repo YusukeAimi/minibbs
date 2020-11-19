@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Yusuke Aimi | works</title>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-background">
+        <div class="header-gradient">
+          <div class="container">
+            <h2 class="content-title" style="padding-top: 20%;">Works</h2>
+            <div class="effect">
+              <p class="content">
+                以下に私がPHPを使用して作成した簡易掲示板の解説をしていきます。
+                作成手順や機能、課題などをまとめました。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="main">
+      <section id="works">
+        <h2 id="background">背景</h2>
+        <div class="works-content">
+          大学時代にWordPressでブログを書いていたことがあり、そのころにWeb関係に興味を持ち始めました。<br>
+          そこでWordPressなどを自由にカスタマイズできるようになりたいと思い、<br>WordPressで使用されているプログラミング言語のPHPを勉強しようと考えました。<br>
+          そしてPHPの勉強のために簡易掲示板を作成することに決め、これをポートフォリオとすることにしました。
+        </div>
+        <h2 id="goal">目的</h2>
+        <div class="works-content">
+          <li>PHPの基礎知識とMySQLの基礎の修得</li>
+          <li>データベースを利用したプログラムの作成</li>
+          <li>PHPを利用したプログラムを作成し、サーバーサイドのWebサービスを開発できる</li>
+          <li>データベースと連携した、Webサービスを開発・カスタマイズできるにする</li>
+          <li>フルスクラッチでのPHPを利用したWebアプリ制作を行う</li>
+        </div>
+        <h2 id="spec">スペック</h2>
+        <div class="works-content">
+          <h4>使用言語</h4>
+            <li>PHP</li>
+            <li>CSS</li>
+            <li>MySQL</li>
+        </div>
+        <div class="works-content">
+          <h4>開発環境</h4>
+            <li>Windows 10</li>
+            <li>XAMPP</li>
+        </div>
+        <div class="works-content">
+          <h4>バージョン管理</h4>
+            <li>Git</li>
+        </div>
+        <div class="works-content">
+          <h4>本番環境</h4>
+            <li>Heroku</li>
+        </div>
+        <h2 id="function">主な機能</h2>
+        <div class="works-content">
+          <li>ニックネーム、メールアドレス、パスワードを設定し会員登録<br>
+          アイコン写真のアップロードも可</li>
+          <img src="images/join.PNG" class="image" style="width:80%; height:auto; padding-bottom: 40px;">
+          <li>会員登録の確認</li>
+          <img src="images/ok.PNG" class="image" style="width:80%; height:auto; padding-bottom: 40px;">
+          <li>メールアドレスとパスワードでログイン</li>
+          <img src="images/login.PNG" class="image" style="width:80%; height:auto; padding-bottom: 40px;">
+          <li>ログアウト</li>
+          <li>文章の投稿</li>
+          <li>投稿の返信・削除</li>
+          <img src="images/view.png" class="image" style="width:80%; height:auto; padding-bottom: 40px;">
+        </div>
+        <h2 id="process">開発手順</h2>
+        <div class="works-content">
+          <h4>要件定義</h4>
+          <p>まず、今回制作するアプリに必要な機能を簡単にまとめる。</p>
+          <img src="images/function.png" class="image" style="width:100%; height:auto;">
+        </div>
+        <div class="works-content">
+          <h4>環境選定</h4>
+          <p>PHPの実行に必要なローカルサーバーのApache、データベースのMariaDB、PHPの本体がパッケージになった統合環境構築ツールXAMPPを使うことにした。</p>
+        </div>
+        <div class="works-content">
+          <h4>データベース設計</h4>
+          <p>データベース設計では、どのような情報が必要か最初に簡単にまとめ、<br>
+          会員関係では、ニックネーム、パスワード、写真、<br>
+          投稿関係では、会員情報、投稿内容、返信先のメッセージ<br>
+          の情報が必要と考え会員関係をmembers、投稿関係をpostsとし、結果このようにまとまりました。</p>
+          <img src="images/database.png" class="image" style="width:50%; height:auto;">
+        </div>
+        <h2 id="implement">機能実装</h2>
+        <div class="works-content">
+          <p>各ページ毎にHTMLで形を作り、PHP内部設計を行った後に、CSSを実装する流れで行いました。</p>
+        </div>
+        <div class="works-content">
+          <h4>全体の形をHTMLで記述</h4>
+          <p>必要な機能をもとに、全体の形を具体化するためにHTMLで骨格作りをしました。</p>
+        </div>
+        <div class="works-content">
+          <h4>PHPで内部設計</h4>
+          <p>
+            データベース設計をもとにローカル環境のMySQLサーバにデータベースを作成。その後、テーブルを作成。
+          </p>
+          <p>
+            PDOを使ってデータベースに接続。<br>
+            この時、try~catchを用い、接続できているのか確認。
+          </p>
+          <p>
+            会員登録をする際に入力する情報はPOSTを用いた。この時、XSS対策として入力される情報に対してhtmlspecialchars関数でエスケープ処理をした。登録内容の確認画面では個人情報が含まれるので、Cookieではなくsessionを用いた。
+          </p>
+        </div>
+        <div class="works-content">
+          <h4>CSS設計</h4>
+          <p>今回のCSSは、このアプリ作成の学習に参考にした<a href="https://www.amazon.co.jp/%E3%82%88%E3%81%8F%E3%82%8F%E3%81%8B%E3%82%8BPHP%E3%81%AE%E6%95%99%E7%A7%91%E6%9B%B8-%E3%80%90PHP7%E5%AF%BE%E5%BF%9C%E7%89%88%E3%80%91-%E3%81%9F%E3%81%AB%E3%81%90%E3%81%A1%E3%81%BE%E3%81%93%E3%81%A8/dp/4839964688">よくわかるPHPの教科書-【PHP7対応版】</a>を模写する形で作成した。</p>
+        </div>
+        <div class="works-content">
+          <h4>Herokuデプロイ</h4>
+          <p>インフラ環境やOS、ソフトなどが揃っていて、すぐに開発を始められるHerokuでアプリを公開することにした。
+          </p>
+          <p>GitHubと連携できたので、GitHubにpushしたリポジトリをそこからHerokuにデプロイしました。
+          </p>
+          <p><a href="https://minibbs2020.herokuapp.com/login.php">Herokuに公開したアプリはこちら</a></p>
+          <p><a href="https://github.com/YusukeAimi/portfolio">GitHubはこちら</a></p>
+        </div>
+        <h2 id="subject">課題</h2>
+        <div class="works-content">
+          <h4>スマートフォンでの表示だと見にくい</h4>
+            <p>今回のcssは参考文献を模写して作ったが、パソコンでの表示にしか対応していないため、<br>スマートフォンで表示させた際に文字が小さく見にくい点や大きく表示されてしまうところがある。<br>時間がある時にでもスマートフォンやタブレットのサイズにも対応したものを作りたい。</p>
+        </div>
+        <div class="works-content">
+          <h4>アイコン写真が表示されない</h4>
+            <p>投稿直後は投稿者のアイコン写真が表示されるが、時間が経つと表示されなくなってしまう。<br>（自分の力不足で解決できず…）</p>
+        </div>
+        <div class="works-content">
+          <h4>機能が単純すぎる</h4>
+            <p>会員登録する際に、登録内容に入力間違いが無いよう確認する画面は作ったが、<br>会員登録後に登録内容を編集する機能もあったほうが便利だと感じた。</p>
+        </div>
+        <div class="works-content">
+          <h4>フレームワークを使用していない</h4>
+            <p>フレームワークの勉強をまだしていないため、今回は使用しませんでした。<br>実際の開発現場では、フレームワークを使用するのが通常であるという認識なので、<br>今後の課題にしていきたいです。</p>
+        </div>
+        <h2 id="last">終わりに</h2>
+        <div class="works-content">
+          <p>今回初めてPHPを使用してアプリを作ったが、まだまだ分からないことばかりなので、<br>今後の課題を踏まえながら、意欲的に取り組んでいきたいです。<br>
+          次回はフレームワーク（Laravel）を用いて、より実用的なアプリを作成したいと考えています。</p>
+        </div>
+        <h2 id="reference">参考文献</h2>
+        <div class="works-content">
+          <li><a href="https://www.amazon.co.jp/%E3%82%88%E3%81%8F%E3%82%8F%E3%81%8B%E3%82%8BPHP%E3%81%AE%E6%95%99%E7%A7%91%E6%9B%B8-%E3%80%90PHP7%E5%AF%BE%E5%BF%9C%E7%89%88%E3%80%91-%E3%81%9F%E3%81%AB%E3%81%90%E3%81%A1%E3%81%BE%E3%81%93%E3%81%A8/dp/4839964688">よくわかるPHPの教科書-【PHP7対応版】</a></li>
+          <li><a href="https://www.udemy.com/course/completeweb2_jp/">フルスタック・Webエンジニア講座</a></li>
+          <li><a href="https://qiita.com/RINYU_DRVO/items/6607a0aa7ca3294f8e47">PHP+MySQLでポートフォリオ作成</a></li>
+          <li><a href="https://qiita.com/ak25562983/items/c6bd1ec88e06a1f7f954">PHPで作ったWebサービスをHerokuでデプロイするまでの手順書</a></li>
+        </div>
+      </section>
+
+      <section id="tables">
+        <ul class="tables-navigation">
+          <h2>目次</h2>
+          <li>
+            <a href="#background"><span>背景</span></a>
+          </li>
+          <li>
+            <a href="#goal"><span>目的</span></a>
+          </li>
+          <li>
+            <a href="#spec"><span>スペック</span></a>
+          </li>
+          <li>
+            <a href="#function"><span>主な機能</span></a>
+          </li>
+          <li>
+            <a href="#process"><span>開発手順</span></a>
+          </li>
+          <li>
+            <a href="#implement"><span>機能実装</span></a>
+          </li>
+          <li>
+            <a href="#subject"><span>課題</span></a>
+          </li>
+          <li>
+            <a href="#last"><span>終わりに</span></a>
+          </li>
+          <li>
+            <a href="#reference"><span>参考文献</span></a>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <!--Contact-->
+    <section id="contact">
+      <div class="contact-background">
+        <div class="gradient">
+          <div class="container">
+            <h2 class="content-title">Contact</h2>
+            <div class="effect">
+              <p class="content">コンタクトフォームがありますので、こちらからお問合せください。</p>
+            </div>
+            <a href="" class="linkbtn" style="text-decoration: none;">Contact</a>
+            <p class="content">※コンタクトフォームは現在作成中のため、使用できません。</p>
+          </div>
+          <div class="copyright" style="margin-bottom: 0%;">
+            <p>Copyright. Yusuke Aimi. 2020 All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="page_top">
+      <a href="#"><span style="color: #000000"><span style="font-size: 200%"><i class="fa fa-arrow-circle-up"></i></span></span></a>
+    </div>
+    <!-- 
+    jQuery、Popper.js、Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    -->
+    <!--js-->
+    <script src="../script.js"></script>
+  </body>
+</html>
